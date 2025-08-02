@@ -6,9 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+
+
+
   <style>
     body { margin: 0; padding: 0; }
     #map { height: 100vh; width: 100vw; }
+
+    .awesome-marker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .awesome-marker .am-glyph {
+      display: block;
+      width: 20px; /* Keep width and height equal to icon img tag values */
+      height: 20px;
+      position: relative;
+      top: -2px;
+    }
   </style>
 </head>
 <body>
@@ -16,8 +34,10 @@
   <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="dist/leaflet.awesome-markers.js"></script>
+
   <script>
-    const map = L.map('map').setView([41.9665, -71.1869], 13);
+    const map = L.map('map').setView([41.99, -71.1869], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap'
@@ -470,14 +490,52 @@
   ]
 };
 
-    const geojsonLayer = L.geoJSON(trailGeojsonData, {
+    const trailGeojsonLayer = L.geoJSON(trailGeojsonData, {
       style: {
         color: 'blue',
         weight: 4
       }
     }).addTo(map);
 
-    map.fitBounds(trailGeojsonData.getBounds());
+
+
+    const parkingIcon = L.divIcon({
+      className: 'awesome-marker awesome-marker-icon-blue', // pick your color
+      html: '<img class="am-glyph" src="dist/maki/parking.svg" alt="" width="20" height="20" />',
+      iconSize: [35, 45],
+      iconAnchor: [17, 42],
+      popupAnchor: [1, -32]
+    });
+
+    const trailheadIcon = L.divIcon({
+      className: 'awesome-marker awesome-marker-icon-green', // pick your color
+      html: '<img class="am-glyph" src="dist/maki/park-alt1.svg" alt="" width="20" height="20" />',
+      iconSize: [35, 45],
+      iconAnchor: [17, 42],
+      popupAnchor: [1, -32]
+    });
+
+    var airportLots = L.marker([42.006075, -71.196867], { icon: parkingIcon })
+            .bindPopup('<h1>Airport Lots</h1>Parking is available on both the north and south sides of Fruit Street');
+    var cobbStreetLot = L.marker([41.992506, -71.184250], { icon: parkingIcon })
+            .bindPopup('<h1>Cobb Street Lot</h1>');
+    var craneStreetLot = L.marker([41.95195370728311, -71.14685576641179], { icon: parkingIcon })
+            .bindPopup('<h1>Crane Street Lot</h1>');
+
+    var parkingLots = L.layerGroup([airportLots, cobbStreetLot, craneStreetLot]).addTo(map);
+
+    var henrichJohnsonWoods = L.marker([41.988024, -71.180296], { icon: trailheadIcon }).bindPopup('LPS land');
+
+    var conservationLand = L.layerGroup([henrichJohnsonWoods]).addTo(map);
+
+    var overlays = {
+      "Parking": parkingLots,
+      "Conservation Land": conservationLand
+    };
+
+    var layerControl = L.control.layers(null, overlays).addTo(map);
+
+    map.fitBounds(trailGeojsonLayer.getBounds());
   </script>
 
 </body>
