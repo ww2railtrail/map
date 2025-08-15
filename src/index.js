@@ -480,7 +480,7 @@ const trailGeojsonLayer = L.geoJSON(trailGeojsonData, {
 
 const parkingIcon = L.divIcon({
     className: 'awesome-marker awesome-marker-icon-blue',
-    html: '<img class="am-glyph" src="../dist/maki/parking.svg" alt="" width="20" height="20" />',
+    html: '<img class="am-glyph" src="dist/maki/parking.svg" alt="" width="20" height="20" />',
     iconSize: [35, 45],
     iconAnchor: [17, 42],
     popupAnchor: [1, -32]
@@ -488,7 +488,7 @@ const parkingIcon = L.divIcon({
 
 const trailheadIcon = L.divIcon({
     className: 'awesome-marker awesome-marker-icon-green',
-    html: '<img class="am-glyph" src="../dist/maki/park-alt1.svg" alt="" width="20" height="20" />',
+    html: '<img class="am-glyph" src="dist/maki/park-alt1.svg" alt="" width="20" height="20" />',
     iconSize: [35, 45],
     iconAnchor: [17, 42],
     popupAnchor: [1, -32]
