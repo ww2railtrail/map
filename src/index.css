@@ -1,0 +1,16 @@
+body { margin: 0; padding: 0; }
+#map { height: 100vh; width: 100vw; }
+
+.awesome-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.awesome-marker .am-glyph {
+    display: block;
+    width: 20px; /* Keep width and height equal to icon img tag values */
+    height: 20px;
+    position: relative;
+    top: -2px;
+}

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlInlineScriptPlugin = require('html-inline-script-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -8,11 +9,22 @@ module.exports = {
     output: {
         // We won't actually use the emitted JS file because it'll be inlined.
         filename: 'bundle.js',
-        // path: path.resolve(__dirname, 'docs'),
-        clean: false, // clears docs/ each build
+        path: path.resolve(__dirname),
+        clean: false,
+        publicPath: '',
     },
     module: {
         rules: [
+            {
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                type: 'javascript/esm',
+                use: {
+                    loader: 'babel-loader',
+                    options: { presets: [['@babel/preset-env', { targets: 'defaults' }]] }
+                }
+            },
+
             // Import popup HTML snippets as strings
             { test: /\.html$/i, include: /src\/popups/, type: 'asset/source' },
 
@@ -24,6 +36,17 @@ module.exports = {
         ],
     },
     optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                extractComments: false,       // <- do not create bundle.js.LICENSE.txt
+                terserOptions: {
+                    format: {
+                        comments: /@license|@preserve|^!/
+                    },
+                },
+            }),
+        ],
         splitChunks: false,
         runtimeChunk: false,
     },

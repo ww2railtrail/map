@@ -1,7 +1,9 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.awesome-markers/dist/leaflet.awesome-markers.css'
+import './index.css'
 import craneStreetHtml from './popups/crane-street.html';
+
 
 const map = L.map('map').setView([41.99, -71.1869], 13);
 const cyclOSM = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
@@ -478,7 +480,7 @@ const trailGeojsonLayer = L.geoJSON(trailGeojsonData, {
 
 
 const parkingIcon = L.divIcon({
-    className: 'awesome-marker awesome-marker-icon-blue', // pick your color
+    className: 'awesome-marker awesome-marker-icon-blue',
     html: '<img class="am-glyph" src="../dist/maki/parking.svg" alt="" width="20" height="20" />',
     iconSize: [35, 45],
     iconAnchor: [17, 42],
@@ -486,7 +488,7 @@ const parkingIcon = L.divIcon({
 });
 
 const trailheadIcon = L.divIcon({
-    className: 'awesome-marker awesome-marker-icon-green', // pick your color
+    className: 'awesome-marker awesome-marker-icon-green',
     html: '<img class="am-glyph" src="../dist/maki/park-alt1.svg" alt="" width="20" height="20" />',
     iconSize: [35, 45],
     iconAnchor: [17, 42],
