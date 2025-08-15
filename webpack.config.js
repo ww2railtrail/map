@@ -7,11 +7,14 @@ module.exports = {
     mode: 'production',
     entry: './src/index.js',
     output: {
-        // We won't actually use the emitted JS file because it'll be inlined.
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname),
         clean: false,
         publicPath: '',
+    },
+    externals: {
+        leaflet: 'L',
+        'leaflet.awesome-markers': { root: ['L', 'AwesomeMarkers'] },
     },
     module: {
         rules: [
@@ -52,12 +55,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',    // basic HTML shell
+            template: './src/index.html',
             filename: 'index.html',
             inject: 'body',
             scriptLoading: 'blocking',
         }),
-        // Inlines the generated <script> into index.html so no bundle.js file is referenced
         new HtmlInlineScriptPlugin(),
     ],
     devtool: false,

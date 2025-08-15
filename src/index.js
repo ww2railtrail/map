@@ -1,6 +1,5 @@
 import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import 'leaflet.awesome-markers/dist/leaflet.awesome-markers.css'
+import 'leaflet.awesome-markers';
 import './index.css'
 import craneStreetHtml from './popups/crane-street.html';
 
