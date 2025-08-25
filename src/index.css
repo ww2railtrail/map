@@ -9,7 +9,7 @@ body { margin: 0; padding: 0; }
 
 .awesome-marker .am-glyph {
     display: block;
-    width: 20px; /* Keep width and height equal to icon img tag values */
+    width: 20px;
     height: 20px;
     position: relative;
     top: -2px;

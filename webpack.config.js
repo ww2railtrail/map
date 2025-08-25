@@ -15,6 +15,7 @@ module.exports = {
     externals: {
         leaflet: 'L',
         'leaflet.awesome-markers': { root: ['L', 'AwesomeMarkers'] },
+        'leaflet.legend': { root: ['L', 'control', 'Legend'] },
     },
     module: {
         rules: [
@@ -63,4 +64,11 @@ module.exports = {
         new HtmlInlineScriptPlugin(),
     ],
     devtool: false,
+    devServer: {
+        static: {
+            directory: __dirname,
+        },
+        watchFiles: ['src/*', 'dist/*'],
+        liveReload: false
+    },
 };
