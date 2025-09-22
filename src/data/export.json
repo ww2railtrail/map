@@ -1,0 +1,535 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-09-21T03:43:31Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/151307695",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "horse": "yes",
+        "lanes": "2",
+        "motor_vehicle": "no",
+        "name": "World War II Veterans Memorial Trail",
+        "old_railway_operator": "NYNH&H",
+        "railway": "abandoned",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1971702,
+            42.0064104
+          ],
+          [
+            -71.1977723,
+            42.0070575
+          ],
+          [
+            -71.1983964,
+            42.0077282
+          ],
+          [
+            -71.1988496,
+            42.0082152
+          ],
+          [
+            -71.1991724,
+            42.0085765
+          ],
+          [
+            -71.2000258,
+            42.0094792
+          ],
+          [
+            -71.2002027,
+            42.0096693
+          ],
+          [
+            -71.202116,
+            42.0117405
+          ],
+          [
+            -71.2030262,
+            42.0127258
+          ],
+          [
+            -71.2039675,
+            42.0137447
+          ],
+          [
+            -71.2047211,
+            42.0145622
+          ],
+          [
+            -71.2050279,
+            42.0148942
+          ],
+          [
+            -71.2053484,
+            42.0152409
+          ],
+          [
+            -71.206099,
+            42.0160608
+          ],
+          [
+            -71.2065778,
+            42.0165746
+          ],
+          [
+            -71.2074516,
+            42.0174762
+          ],
+          [
+            -71.2077411,
+            42.0177782
+          ],
+          [
+            -71.2077577,
+            42.0177955
+          ],
+          [
+            -71.2077949,
+            42.0178335
+          ],
+          [
+            -71.2078326,
+            42.0178766
+          ],
+          [
+            -71.2081945,
+            42.0182728
+          ],
+          [
+            -71.209931,
+            42.0201559
+          ],
+          [
+            -71.2120122,
+            42.0224171
+          ],
+          [
+            -71.2142888,
+            42.0248821
+          ]
+        ]
+      },
+      "id": "way/151307695"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/544672849",
+        "bicycle": "yes",
+        "foot": "yes",
+        "highway": "cycleway",
+        "horse": "yes",
+        "name": "World War II Veterans Memorial Trail",
+        "segregated": "no",
+        "surface": "unpaved",
+        "width": "4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1871193,
+            41.996318
+          ],
+          [
+            -71.1870371,
+            41.996302
+          ],
+          [
+            -71.1865846,
+            41.9963651
+          ],
+          [
+            -71.1863226,
+            41.9964764
+          ],
+          [
+            -71.1856218,
+            41.9965378
+          ],
+          [
+            -71.1855169,
+            41.9965134
+          ],
+          [
+            -71.1854767,
+            41.9964352
+          ],
+          [
+            -71.1854691,
+            41.9963695
+          ],
+          [
+            -71.1854576,
+            41.9962589
+          ]
+        ]
+      },
+      "id": "way/544672849"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/551023363",
+        "abandoned:railway": "track",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "name": "World War II Veterans Memorial Trail",
+        "old_railway_operator": "NYNH&H",
+        "railway": "abandoned"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1871193,
+            41.996318
+          ],
+          [
+            -71.1878174,
+            41.9965958
+          ],
+          [
+            -71.1878949,
+            41.9966287
+          ],
+          [
+            -71.1879618,
+            41.9966796
+          ],
+          [
+            -71.1885162,
+            41.9972682
+          ],
+          [
+            -71.1887408,
+            41.9974029
+          ],
+          [
+            -71.1889441,
+            41.9976022
+          ],
+          [
+            -71.1892007,
+            41.997786
+          ],
+          [
+            -71.1898482,
+            41.9985712
+          ],
+          [
+            -71.1900508,
+            41.9987715
+          ],
+          [
+            -71.1903589,
+            41.9991479
+          ],
+          [
+            -71.1908166,
+            41.9995583
+          ],
+          [
+            -71.1912773,
+            42.0000093
+          ],
+          [
+            -71.1968507,
+            42.0060768
+          ]
+        ]
+      },
+      "id": "way/551023363"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/696310700",
+        "abandoned:railway": "track",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "horse": "yes",
+        "name": "World War II Veterans Memorial Trail",
+        "old_railway_operator": "NYNH&H",
+        "railway": "abandoned",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1512569,
+            41.9566756
+          ],
+          [
+            -71.1536167,
+            41.9592269
+          ],
+          [
+            -71.1559238,
+            41.9617292
+          ],
+          [
+            -71.1567612,
+            41.9626355
+          ],
+          [
+            -71.1626216,
+            41.9689783
+          ],
+          [
+            -71.1674622,
+            41.9742169
+          ],
+          [
+            -71.1687653,
+            41.9756135
+          ],
+          [
+            -71.1725667,
+            41.979754
+          ],
+          [
+            -71.1752094,
+            41.9825928
+          ],
+          [
+            -71.1758323,
+            41.9833119
+          ],
+          [
+            -71.1779121,
+            41.9855397
+          ],
+          [
+            -71.1780071,
+            41.9856409
+          ],
+          [
+            -71.1781293,
+            41.9857813
+          ],
+          [
+            -71.1782113,
+            41.9858741
+          ],
+          [
+            -71.1785134,
+            41.9862123
+          ],
+          [
+            -71.1785866,
+            41.9862964
+          ],
+          [
+            -71.1801501,
+            41.9879789
+          ],
+          [
+            -71.1802589,
+            41.9880965
+          ],
+          [
+            -71.1841981,
+            41.9923915
+          ],
+          [
+            -71.1842258,
+            41.992422
+          ]
+        ]
+      },
+      "id": "way/696310700"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/973134602",
+        "abandoned:railway": "track",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "horse": "yes",
+        "name": "World War II Veterans Memorial Trail",
+        "old_railway_operator": "NYNH&H",
+        "railway": "abandoned",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1468064,
+            41.9518857
+          ],
+          [
+            -71.1512569,
+            41.9566756
+          ]
+        ]
+      },
+      "id": "way/973134602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1286369600",
+        "abandoned:railway": "track",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "horse": "yes",
+        "name": "World War II Veterans Memorial Trail",
+        "old_railway_operator": "NYNH&H",
+        "railway": "abandoned",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1841858,
+            41.9945419
+          ],
+          [
+            -71.1849687,
+            41.9954939
+          ],
+          [
+            -71.1852192,
+            41.9957974
+          ],
+          [
+            -71.1852646,
+            41.9958797
+          ],
+          [
+            -71.1853154,
+            41.9959856
+          ],
+          [
+            -71.1853567,
+            41.996089
+          ],
+          [
+            -71.1853743,
+            41.9961943
+          ],
+          [
+            -71.1854516,
+            41.9961939
+          ],
+          [
+            -71.1854576,
+            41.9962589
+          ]
+        ]
+      },
+      "id": "way/1286369600"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1286369601",
+        "abandoned:railway": "track",
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "horse": "yes",
+        "layer": "1",
+        "name": "World War II Veterans Memorial Trail",
+        "old_railway_operator": "NYNH&H",
+        "railway": "abandoned",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.183488,
+            41.9937242
+          ],
+          [
+            -71.1841858,
+            41.9945419
+          ]
+        ]
+      },
+      "id": "way/1286369601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1292199167",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "horse": "yes",
+        "name": "World War II Veterans Memorial Trail",
+        "segregated": "no",
+        "surface": "asphalt",
+        "width": "4"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.1842258,
+            41.992422
+          ],
+          [
+            -71.1830611,
+            41.9927719
+          ],
+          [
+            -71.182975,
+            41.9928216
+          ],
+          [
+            -71.1829222,
+            41.99287
+          ],
+          [
+            -71.182892,
+            41.9929456
+          ],
+          [
+            -71.1828991,
+            41.993005
+          ],
+          [
+            -71.1829198,
+            41.9930606
+          ],
+          [
+            -71.183488,
+            41.9937242
+          ]
+        ]
+      },
+      "id": "way/1292199167"
+    }
+  ]
+}

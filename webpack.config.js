@@ -69,6 +69,6 @@ module.exports = {
             directory: __dirname,
         },
         watchFiles: ['src/*', 'dist/*'],
-        liveReload: false
+        liveReload: true
     },
 };

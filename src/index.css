@@ -14,3 +14,17 @@ body { margin: 0; padding: 0; }
     position: relative;
     top: -2px;
 }
+
+.leaflet-control-custom-html {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 14px;
+    max-width: 200px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.leaflet-control-custom-html h4 {
+    margin: 0 0 4px;
+    font-size: 14px;
+}
