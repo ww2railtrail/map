@@ -76,8 +76,16 @@ const leafIcon = L.divIcon({
     popupAnchor: [1, -32]
 });
 
+const coffeeIcon = L.divIcon({
+    className: 'awesome-marker awesome-marker-icon-orange',
+    html: '<img class="am-glyph" src="dist/icons/maki/cafe.svg" alt="" width="20" height="20" />',
+    iconSize: [35, 45],
+    iconAnchor: [17, 42],
+    popupAnchor: [1, -32]
+});
+
 const popupOptions = {
-    minWidth: window.innerWidth <= 768 ? 250 : 500,
+    // minWidth: window.innerWidth <= 768 ? 250 : 500,
     autoPan: true,
 };
 
@@ -107,9 +115,11 @@ const unpavedWarning = L.marker([41.99649398810723,-71.18616521358491], {icon: c
 const warnings = L.layerGroup([unpavedWarning]);
 
 const exampleEvent = L.marker([41.986071746465086,-71.17844849824907], {icon: leafIcon})
-    .bindPopup('example event', popupOptions);
+    .bindPopup('<h2>Rock Painting</h2>Lorem ipsum details.', popupOptions);
+const ciderEvent = L.marker([41.99241540282406,-71.18417501449586], {icon: coffeeIcon})
+    .bindPopup('<h2>Hot Cider</h2>Sponsored by someone.', popupOptions);
 
-const eventAttractions = L.layerGroup([exampleEvent])
+const eventAttractions = L.layerGroup([exampleEvent, ciderEvent])
 
 const legend = L.control.Legend({
     position: "bottomleft",
