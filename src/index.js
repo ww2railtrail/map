@@ -15,6 +15,9 @@ import craneStreetHTML from './popups/parking-crane-street.html';
 import henrichJohnsonHTML from './popups/henrich-johnson-woods.html';
 import unpavedWarningHTML from './popups/unpaved-warning.html';
 
+import eventLPSHTML from './popups/event-lps.html';
+import event123HTML from './popups/event-123.html';
+import eventSouthInterpHTML from './popups/event-south-interp.html';
 import fallFoliageEventHTML from './popups/fall-foliage-event.html';
 
 
@@ -76,9 +79,9 @@ const leafIcon = L.divIcon({
     popupAnchor: [1, -32]
 });
 
-const coffeeIcon = L.divIcon({
+const lpsIcon = L.divIcon({
     className: 'awesome-marker awesome-marker-icon-orange',
-    html: '<img class="am-glyph" src="dist/icons/maki/cafe.svg" alt="" width="20" height="20" />',
+    html: '<img class="am-glyph" src="dist/icons/lps.webp" alt="" width="20" height="20" />',
     iconSize: [35, 45],
     iconAnchor: [17, 42],
     popupAnchor: [1, -32]
@@ -114,12 +117,15 @@ const unpavedWarning = L.marker([41.99649398810723,-71.18616521358491], {icon: c
 
 const warnings = L.layerGroup([unpavedWarning]);
 
-const exampleEvent = L.marker([41.986071746465086,-71.17844849824907], {icon: leafIcon})
-    .bindPopup('<h2>Rock Painting</h2>Lorem ipsum details.', popupOptions);
-const ciderEvent = L.marker([41.99241540282406,-71.18417501449586], {icon: coffeeIcon})
-    .bindPopup('<h2>Hot Cider</h2>Sponsored by someone.', popupOptions);
+const eventLPS = L.marker([41.986191368711744,-71.17854237556459], {icon: lpsIcon})
+    .bindPopup(eventLPSHTML, popupOptions);
+const event123Crossing = L.marker([41.97572755960937,-71.1688730120659], {icon: leafIcon})
+    .bindPopup(event123HTML, popupOptions);
+const eventSouthInterpPanels = L.marker([41.96109767643177,-71.15533590316774], {icon: leafIcon})
+    .bindPopup(eventSouthInterpHTML, popupOptions);
 
-const eventAttractions = L.layerGroup([exampleEvent, ciderEvent])
+
+const eventAttractions = L.layerGroup([eventLPS, event123Crossing, eventSouthInterpPanels]);
 
 const legend = L.control.Legend({
     position: "bottomleft",
@@ -163,6 +169,11 @@ customHtmlControl.onAdd = function(map) {
     const div = L.DomUtil.create('div', 'leaflet-control-custom-html');
     div.innerHTML = fallFoliageEventHTML;
     L.DomEvent.disableClickPropagation(div);
+    const closeBtn = div.querySelector('.control-close-btn');
+    closeBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        map.removeControl(customHtmlControl);
+    });
     return div;
 };
 

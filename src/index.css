@@ -21,10 +21,43 @@ body { margin: 0; padding: 0; }
     border-radius: 4px;
     padding: 6px 8px;
     font-size: 14px;
-    max-width: 200px;
+    max-width: 400px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
-.leaflet-control-custom-html h4 {
-    margin: 0 0 4px;
-    font-size: 14px;
+
+/* For screens 400px wide or less */
+@media (max-width: 400px) {
+    .leaflet-control-custom-html {
+        left: 0;
+        right: 0;
+        margin: 0;
+    }
 }
+
+.leaflet-control-custom-html h1 {
+    margin: 0 0 4px;
+    font-size: 18px;
+}
+
+.control-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.control-close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+.control-close-btn:hover {
+    color: #e74c3c;
+}
+
+/*.leaflet-control-custom-html h2 {*/
+/*    margin: 0 0 4px;*/
+/*    font-size: 12px;*/
+/*}*/
