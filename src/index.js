@@ -179,14 +179,14 @@ customHtmlControl.onAdd = function(map) {
 
 const params = new URLSearchParams(location.search);
 const specialEvent = params.get("mode") === "event";
-console.log(params.toString());
+const specialEventEmbed = params.get("mode") === "eventembed";
 
 if (specialEvent) {
-    console.log("event");
     eventAttractions.addTo(map);
     customHtmlControl.addTo(map);
+} else if (specialEventEmbed) {
+    eventAttractions.addTo(map);
 } else {
-    console.log("no event");
     parkingLots.addTo(map);
     conservationLand.addTo(map);
     warnings.addTo(map);
