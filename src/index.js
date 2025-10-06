@@ -90,6 +90,7 @@ const lpsIcon = L.divIcon({
 const popupOptions = {
     // minWidth: window.innerWidth <= 768 ? 250 : 500,
     autoPan: true,
+    maxHeight: 200,
 };
 
 const fruitStreetLots = L.marker([42.006075, -71.196867], { icon: parkingIcon })
