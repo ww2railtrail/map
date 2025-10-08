@@ -73,7 +73,7 @@ const cautionIcon = L.divIcon({
 
 const leafIcon = L.divIcon({
     className: 'awesome-marker awesome-marker-icon-orange',
-    html: '<img class="am-glyph" src="dist/icons/leaf.svg" alt="" width="20" height="20" />',
+    html: '<img class="am-glyph" src="dist/icons/logo.png" alt="" width="20" height="20" />',
     iconSize: [35, 45],
     iconAnchor: [17, 42],
     popupAnchor: [1, -32]
@@ -118,12 +118,14 @@ const unpavedWarning = L.marker([41.99649398810723,-71.18616521358491], {icon: c
 
 const warnings = L.layerGroup([unpavedWarning]);
 
+let eventPopupOptions= structuredClone(popupOptions);
+eventPopupOptions.zIndexOffset = -1000;
 const eventLPS = L.marker([41.986191368711744,-71.17854237556459], {icon: lpsIcon})
-    .bindPopup(eventLPSHTML, popupOptions);
+    .bindPopup(eventLPSHTML, eventPopupOptions);
 const event123Crossing = L.marker([41.97572755960937,-71.1688730120659], {icon: leafIcon})
-    .bindPopup(event123HTML, popupOptions);
+    .bindPopup(event123HTML, eventPopupOptions);
 const eventSouthInterpPanels = L.marker([41.96109767643177,-71.15533590316774], {icon: leafIcon})
-    .bindPopup(eventSouthInterpHTML, popupOptions);
+    .bindPopup(eventSouthInterpHTML, eventPopupOptions);
 
 
 const eventAttractions = L.layerGroup([eventLPS, event123Crossing, eventSouthInterpPanels]);
@@ -182,13 +184,13 @@ const params = new URLSearchParams(location.search);
 const specialEvent = params.get("mode") === "event";
 const specialEventEmbed = params.get("mode") === "eventembed";
 
+parkingLots.addTo(map);
 if (specialEvent) {
     eventAttractions.addTo(map);
     customHtmlControl.addTo(map);
 } else if (specialEventEmbed) {
     eventAttractions.addTo(map);
 } else {
-    parkingLots.addTo(map);
     conservationLand.addTo(map);
     warnings.addTo(map);
     legend.addTo(map);
