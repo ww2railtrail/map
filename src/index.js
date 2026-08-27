@@ -13,6 +13,7 @@ import briggsStreetHTML from './popups/parking-briggs-street.html';
 import craneStreetHTML from './popups/parking-crane-street.html';
 
 import henrichJohnsonHTML from './popups/henrich-johnson-woods.html';
+import wwiiNatureTrailHTML from './popups/wwii-nature-trail.html';
 import unpavedWarningHTML from './popups/unpaved-warning.html';
 
 import eventLPSHTML from './popups/event-lps.html';
@@ -110,8 +111,10 @@ const parkingLots = L.layerGroup([fruitStreetLots, winthropDahlLot, cobbStreetLo
 
 const henrichJohnsonWoods = L.marker([41.98771852630877,-71.18112802505495], { icon: trailheadIcon })
     .bindPopup(henrichJohnsonHTML, popupOptions);
+const wwiiNatureTrail = L.marker([42.01416483736357,-71.20578289031984], { icon: trailheadIcon })
+    .bindPopup(wwiiNatureTrailHTML, popupOptions);
 
-const conservationLand = L.layerGroup([henrichJohnsonWoods]);
+const conservationLand = L.layerGroup([henrichJohnsonWoods, wwiiNatureTrail]);
 
 const unpavedWarning = L.marker([41.99649398810723,-71.18616521358491], {icon: cautionIcon })
     .bindPopup(unpavedWarningHTML, popupOptions);
