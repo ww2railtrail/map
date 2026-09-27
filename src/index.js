@@ -187,7 +187,6 @@ const params = new URLSearchParams(location.search);
 const specialEvent = params.get("mode") === "event";
 const specialEventEmbed = params.get("mode") === "eventembed";
 
-parkingLots.addTo(map);
 if (specialEvent) {
     eventAttractions.addTo(map);
     customHtmlControl.addTo(map);
@@ -198,6 +197,7 @@ if (specialEvent) {
     warnings.addTo(map);
     legend.addTo(map);
 }
+parkingLots.addTo(map);
 
 
 // Tiles and overlay selection control.
